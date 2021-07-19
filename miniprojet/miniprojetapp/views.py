@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 def index(request):
 
     #formations = Formation.objects.all()
-    formations = Formation.objects.get_queryset().order_by('id')
+    formations = Formation.objects.get_queryset().order_by('titre')
     template_name = 'miniprojetapp/index.html'
     # Search funtionality
     categorie = request.GET.get('categorie')
